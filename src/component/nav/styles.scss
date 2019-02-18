@@ -1,0 +1,42 @@
+.nav-container {
+    height: 50px;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+    line-height: 50px;
+    width: 160px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    height: 50px;
+    background-color: #539406;
+
+    border-right: 1px solid #467a07;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #467a07;
+    }
+}
+
+.menu-item-active {
+    display: inline-block;
+    line-height: 50px;
+    width: 160px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    height: 50px;
+    background-color: #467a07;
+}

@@ -1,0 +1,18 @@
+{
+    "presets": [
+        "env",
+        "latest",
+        "react",
+        "stage-0"
+    ],
+    "plugins":[
+        "transform-runtime",
+        "transform-object-rest-spread",
+        [
+            "import", {
+                "libraryName": "antd",
+                "style": true
+            }
+        ]
+    ]
+}

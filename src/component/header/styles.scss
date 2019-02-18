@@ -1,0 +1,28 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+
+    .header-logo{
+        display: inline-block;
+    }
+}
+
+.header-operate{
+    display: inline-block;
+    color: #999;
+    margin-right: 20px;
+
+    .login{
+        &:hover {
+            color: #0cf;
+            cursor: pointer;
+        }
+    }
+
+    .register{
+        &:hover {
+            color: #0cf;
+            cursor: pointer;
+        }
+    }
+}
