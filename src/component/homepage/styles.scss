@@ -1,0 +1,75 @@
+
+
+.homepage-container {
+    /*height: 523px;*/
+    
+}
+
+.banner-project-elem {
+    height: 523px;
+    overflow: hidden;
+    background: url(../../image/kv_bg.jpg);
+
+    .banner-bg {
+        height: 450px;
+        width: 800px;
+        margin-top: 30px;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        /*position: relative;*/
+        
+        div {
+            width: 800px; 
+            height: 100%;
+            margin: auto;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.content-container {   
+    padding-top: 80px;
+    margin-top: 24px;
+
+    .content-title {
+        padding-left: 30px;
+        line-height: 30px;
+        font-size: 24px;
+        background: url(../../image/icon-tit.png) no-repeat left center;
+        width: 960px;
+        margin: auto;
+    }
+    span {
+        float: right;
+        font-size: 14px;
+
+        &:hover {
+            cursor: pointer;
+            color: #696;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8px;
+    width: 960px;
+    margin: auto;
+
+    .supplement {
+        width: 300px;
+    }
+
+}
+
+

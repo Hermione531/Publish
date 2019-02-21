@@ -6,7 +6,7 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const OpenBrowerPlugin = require('open-browser-webpack-plugin');
 
-const port = 8080;
+const port = 8081;
 const host = `http://localhost:${port}`;
 
 module.exports = {
@@ -23,6 +23,8 @@ module.exports = {
         ],
         extensions: [".js", ".jsx", ".json", ".css", ".scss"]
     },
+
+    mode: 'development',
 
     devtool: 'eval-source-map',
     devServer: {
@@ -57,8 +59,16 @@ module.exports = {
                 }
             }, 'sass-loader']
         },{
+            test: /\.less$/,
+            use: ["style-loader", 'css-loader',{
+                loader:  'less-loader',
+                options: {
+                    javascriptEnabled: true
+                }
+            }]
+        },{
             test: /\.css$/,
-            loader: "style-loader!css-loader?modules",
+            use:["style-loader", "css-loader"],
         },{
             test: /\.(?:png|jpg|gif)/,
             loader: 'url-loader?limit=8192&name=image/[hash].[ext]' ,
@@ -78,19 +88,18 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: 'node_modules/antd/dist/antd.min.js',
             to: 'lib/'
-        }
-        ]),
-
+        }]),
         new HtmlWebpackIncludeAssetsPlugin({
             assets: [
+                'lib/react.min.js',
+                'lib/react-dom.min.js',
                 'lib/antd.min.js',
             ],
             append: false
         }),
-
-        new OpenBrowerPlugin({
-            url: host
-        }),
+        // new OpenBrowerPlugin({
+        //     url: host
+        // }),
 
     ]
 

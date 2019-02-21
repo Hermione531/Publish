@@ -1,0 +1,1 @@
+export const GET_BASIC_FILES = 'GET_BASIC_FILES';

@@ -1,0 +1,102 @@
+@import '../../css/public.scss';
+
+.news-container {
+    width: 960px;
+    position: relative;
+    margin: auto;
+    min-height: 700px;
+
+    .news {
+        padding: 0 10px;
+        position: relative;
+
+        .news-item {
+            list-style-type: none;
+
+            height: 30px;
+            border-bottom: 1px dashed $gray-color-5;
+            margin: 10px 0;
+
+            a {
+                color: $gray-color-8;
+                padding-left: 10px;
+
+                &:hover {
+                    color: $primary-color-2;
+                }
+            }
+
+            i {
+                color: #539406;
+            }
+
+            span {
+                position: absolute;
+                right: 10px;
+            }
+        }
+
+        margin-bottom: 50px;
+    }
+
+    .news-title {
+        font-size: 24px;
+        font-family: serif;
+        color: $gray-color-9;
+        text-align: center;
+        height: 45px;
+
+        border-bottom: 1px solid $gray-color-3;
+
+    }
+
+    .content {
+        line-height: 28px;
+        font-size: 16px;
+        font-family: serif;
+
+        margin-top: 10px;
+        text-indent: 30px;
+    }
+   
+    /*修改antd默认样式*/
+    .pagination {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+        :global {
+            .ant-pagination-item:hover {
+                border-color: $primary-color-1;
+
+                a {
+                    color: $primary-color-1;
+                }
+                
+            }
+            .ant-pagination-item-link:hover {
+                color: $primary-color-1;
+                border-color: $primary-color-1;
+            }
+            .ant-pagination-item-active {
+                background-color: $primary-color-2;
+                border-color: $primary-color-2;
+                a {
+                    color: white;
+                    
+                }
+
+                &:hover {
+                    border-color: $primary-color-1;
+                    background-color: $primary-color-1;
+                }
+            }
+
+            .ant-pagination-options-quick-jumper input:hover {
+                border-color: $primary-color-1;
+            }
+        }
+    }
+}
+

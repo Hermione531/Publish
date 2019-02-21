@@ -1,0 +1,20 @@
+@import '../../css/public.scss';
+
+.curLoc {
+    padding: 10px 5px;
+    width: 960px;
+    margin: auto;
+    .curLoc-item {
+        font-size: 14px;
+        color: $gray-color-7;
+
+        a{
+            color: $gray-color-7;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary-color-2;
+            }
+        }
+    }
+}
